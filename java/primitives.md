@@ -36,7 +36,7 @@ For most programs, using `double` is encouraged, as it offers less precision los
 
 The following type does not fit into the above two categories:
 
-`bool` - takes up 1 byte, holds only the values `true` and `false`
+`boolean` - takes up 1 byte, holds only the values `true` and `false`
 
 Note that the String data type is conspicuously absent from this list; this is because it's not strictly a primitive, and behaves more like an object instead (more in another chapter).
 
@@ -65,7 +65,7 @@ float decimal = 1.25;
 Note that each statement is followed by a semicolon `;` which indicates the end of that statement. This allows a long statement to span multiples lines of code if necessary.
 Also note the usage of `'a'` in the second example; this indicates to return the ASCII value of the character 'a', which is 97.
 
-### Basic Arithmetic
+## Basic Arithmetic
 
 The following operators can be used on the numeric (integer and floating point) primitives:
 

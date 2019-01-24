@@ -8,3 +8,6 @@ Content in this guide will assume the use of a Unix environment, although most o
 1. [Hello World Program](helloworld.md)
 1. [Primitive Data Types and Basic Statements](primitives.md)
 1. [Handling Input/Output](io.md)
+1. [Conditional Statements](conditional.md)
+1. [Arrays](arrays.md)
+1. [Memory Organisation](memory.md)

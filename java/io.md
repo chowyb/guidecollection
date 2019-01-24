@@ -4,8 +4,8 @@
 
 In this chapter, you will learn how to handle basic input and output in Java.
 By the end of the chapter, you should be able to:
-- Reading input from screen
-- Printing output to screen
+- Read input from screen
+- Print output to screen
 
 ## Reading Input
 
