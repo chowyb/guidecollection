@@ -11,3 +11,5 @@ Content in this guide will assume the use of a Unix environment, although most o
 1. [Conditional Statements](conditional.md)
 1. [Arrays](arrays.md)
 1. [Memory Organisation](memory.md)
+1. [Method Calls](method.md)
+1. [Objects](objects.md)
