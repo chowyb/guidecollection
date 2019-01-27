@@ -54,6 +54,31 @@ public static void main(String[] args) {
 }
 ```
 
+Also, note that from the chapter on memory organisation, there is a difference between primitives and objects: as the values of the parameters are copied over to the method (and the values of objects are the memory addresses of the object themselves), passing a primitive will not modify that primitive in the caller method, while passing an object will modify that object in the caller method as well, provided the parameter still points to the same object:
+
+```java
+public static void modifyArray(int[] param) {
+    param[0] = -5;
+}
+
+public static void notModifyingArray(int[] param) {
+    param = new int[3]; // no longer points to the same array
+    param[0] = 42;
+}
+
+public static void main(String[] args) {
+    int[] arr = new int[3];
+    arr[0] = 2;
+    arr[1] = 3;
+    arr[2] = 7;
+    System.out.println(arr[0]);
+    modifyArray(arr);
+    System.out.println(arr[0]);
+    notModifyingArray(arr);
+    System.out.println(arr[0]);
+}
+```
+
 ## Method Overloading
 
 Note that since methods have to declare what parameters they expect, as well as their type, it is in fact possible to have multiple methods with the same name, but different parameters. The easiest form of this is to have a different number of parameters:

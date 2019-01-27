@@ -19,7 +19,7 @@ System.out.println(firstNumber + " " + secondNumber); // should output "2 1"
 
 ## Memory - Objects
 
-For objects (which is basically anything that's not a primitive, including arrays), when a variable is declared, that variable does not store the value itself; instead, it stores a reference to an instance of an object. Multiple variables can refer to the same object, and modifying this object will cause the changes to be reflected across all other variables referencing this same object.
+For objects (which is basically anything that's not a primitive, including arrays - this will be covered in more details in a later chapter), when a variable is declared, that variable does not store the value itself; instead, it stores a reference to an instance of an object. Multiple variables can refer to the same object, and modifying this object will cause the changes to be reflected across all other variables referencing this same object.
 
 ```java
 int[] firstArray = new int[2]; // firstArray contains a reference to an array with 2 integers
