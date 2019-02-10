@@ -14,3 +14,7 @@ Content in this guide will assume the use of a Unix environment, although most o
 1. [Method Calls](method.md)
 1. [Classes and Objects](objects.md)
 1. [Inheritance](inheritance.md)
+
+The following chapter does not fit into the guide in a general sense (ie. the scope is too specific), and therefore is kept in its own section:
+
+1. [Sit-in Labs](sitin.md)
