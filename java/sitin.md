@@ -123,7 +123,7 @@ Runtime errors occur when something unexpected happens while the program is runn
 import java.util.*;
 
 public class Test {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<Integer>();
         arr.add(7);
         arr.add(4);
@@ -176,7 +176,7 @@ Sometimes your program may compile and run just fine, but give a result that is 
 import java.util.*;
 
 public class Test {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         System.out.println(process(42));
     }
 
@@ -205,7 +205,7 @@ Suppose that we were unable to figure the reason out by staring at the code (alt
 import java.util.*;
 
 public class Test {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         System.out.println(process(42));
     }
 
@@ -229,6 +229,48 @@ public class Test {
 
 From this, we see a pattern of 84 -> 42 -> 21 -> 84, which seems to suggest that perhaps the calculation for an odd number isn't working. Due to this, we can possibly fix it.
 However, one possible issue with doing this is that the extra print statements will show up as part of the results, which will result in a difference when comparing the output. One would have to comment out all the extra print statements after the bug has been fixed as a result (which may take awhile).
+
+To resolve this, it could help to use a separate method for printing debug statements instead:
+
+```java
+import java.util.*;
+
+public class Test {
+    public static boolean debug = true;
+
+    // separate method for no arguments
+    public static void debugPrint() {
+        if (debug) System.out.println();
+    }
+
+    // encompasses most cases, except where no arguments are provided
+    public static void debugPrint(Object obj) {
+        if (debug) System.out.println(obj);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(process(42));
+    }
+
+    // checks how many iterations are necessary for the number to hit 1
+    public static int process(int num) {
+        int ans = 0;
+        while (num != 1) {
+            debugPrint(num);
+            if (num % 2 == 0) {
+                num /= 2;
+            }
+            else {
+                num *= 3 + 1;
+            }
+            ans++;
+        }
+        return ans;
+    }
+}
+```
+
+Simply change `debug` to false before submission.
 
 ## Strategies
 
