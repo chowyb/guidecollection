@@ -15,20 +15,20 @@ Primitive data types (or "primitives" for short) are basic data types that are b
 
 Java provides a few types of primitives for handling integers. They differ in terms of the amount of space they take up in memory, and as a result also affects the range of values they can take. The following primitives fall into this category:
 
-`byte` - takes up 1 byte, holds values from -128 to 127 inclusive
-`short` - takes up 2 bytes, holds values from -65,536 to 65,535 inclusive
-`char` - takes up 2 bytes, holds values from 0 to 131,071 inclusive
-`int` - takes up 4 bytes, holds values from -2,147,483,648 to 2,147,483,647 inclusive
-`long` - takes up 8 bytes, holds values from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 inclusive
+`byte` - takes up 1 byte, holds values from -128 to 127 inclusive.\
+`short` - takes up 2 bytes, holds values from -65,536 to 65,535 inclusive.\
+`char` - takes up 2 bytes, holds values from 0 to 131,071 inclusive.\
+`int` - takes up 4 bytes, holds values from -2,147,483,648 to 2,147,483,647 inclusive.\
+`long` - takes up 8 bytes, holds values from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 inclusive.
 
-For most programs, using just the `int` primitive is sufficient.
+For most programs, using just the `int` primitive is sufficient, with the occasional use of `long` if the desired value does not fit in the range of an `int`.
 
 ### Floating Point Types
 
 Floating point primitives are able to support values with decimal places (eg. 1.25), unlike integer types, and also have a much larger range of values they can hold, although they may not hold the exact value of the number (the difference however is usually negligible). The following primitives fall into this category:
 
-`float` - takes up 4 bytes, holds values from -2<sup>149</sup> to (2-2<sup>23</sup>)*2<sup>127</sup>
-`double` - takes up 8 bytes, holds values from -2<sup>1074</sup> to (2-2<sup>52</sup>)*2<sup>1023</sup>
+`float` - takes up 4 bytes, holds values from -2<sup>149</sup> to (2-2<sup>23</sup>)*2<sup>127</sup>.\
+`double` - takes up 8 bytes, holds values from -2<sup>1074</sup> to (2-2<sup>52</sup>)*2<sup>1023</sup>.
 
 For most programs, using `double` is encouraged, as it offers less precision loss over the `float` data type.
 
@@ -63,16 +63,17 @@ float decimal = 1.25;
 ```
 
 Note that each statement is followed by a semicolon `;` which indicates the end of that statement. This allows a long statement to span multiples lines of code if necessary.
-Also note the usage of `'a'` in the second example; this indicates to return the ASCII value of the character 'a', which is 97.
+Also note the usage of `'a'` in the second example; this indicates the use of the ASCII value of the character 'a', which is 97.
+It is possible to assign the ASCII value of a character to any integer
 
 ## Basic Arithmetic
 
 The following operators can be used on the numeric (integer and floating point) primitives:
 
-`+` - adds two numbers
-`-` - subtracts two numbers
-`*` - multiplies two numbers
-`/` - divides the first number by the second number
+`+` - adds two numbers\
+`-` - subtracts two numbers\
+`*` - multiplies two numbers\
+`/` - divides the first number by the second number\
 `=` - assigns the value of the second number to the first number (does not work if the first number is not a variable)
 
 Note the following rules for numeric operations:
@@ -82,6 +83,7 @@ When operands of an operation have differing types:
 1. Otherwise, if one of them is float, convert the other to float
 1. Otherwise, if one of them is long, convert the other to long
 1. Otherwise, convert both into int
+
 Essentially, this attempts to convert both operands to the type with the larger range.
 
 It is also possible for the assignment operator to assign two numbers of different types. One of two possible cases will arise:
@@ -94,10 +96,22 @@ int newValue = (int)2.02;
 
 Note that this will result in some loss of data (in the example above, newValue would now contain the number 2).
 
-Also note that for division, if two integer types are used for the division, it will attempt to perform integer division (ie. the remainder is discarded). To avoid this, explicitly cast either number to a float or double eg:
+Also note that for division, if two integer types are used for the division, it will attempt to perform integer division (ie. the remainder is discarded).
+
+```java
+int number = 100;
+int quotient = 9;
+double result = number / quotient;
+System.out.println(result); // should print 11.0, which may be undesired
+```
+
+To avoid this, explicitly cast either number to a float or double eg:
 
 ```java
 int number = 100;
 int quotient = 9;
 double result = (double)number / quotient;
+System.out.println(result); // should print 11.111...
 ```
+
+
