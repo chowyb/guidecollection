@@ -12,12 +12,12 @@ By the end of the chapter, you should be able to:
 
 For Java, conditionals can only be used in conjunction with boolean values, so we'll cover that first. Recall in the chapter on primitives that we have a primitive data type called `boolean` which only holds `true` and `false` values. Apart from these variables, other operators exist that can return a boolean value, the most common being comparison operators. A few examples follow:
 
-a > b: returns true if a is greater than b; returns false otherwise
-a >= b: returns true if a is greater to or equals to b; returns false otherwise
-a == b: returns true if a is equals to b; returns false otherwise
-a <= b: returns true if a is equal to or less than b; returns false otherwise
-a < b: returns true if a is less than b; returns false otherwise
-a != b: returns true if a is not equals to b; returns false otherwise
+`a > b`: returns true if a is greater than b; returns false otherwise.\
+`a >= b`: returns true if a is greater to or equals to b; returns false otherwise.\
+`a == b`: returns true if a is equals to b; returns false otherwise.\
+`a <= b`: returns true if a is equal to or less than b; returns false otherwise.\
+`a < b`: returns true if a is less than b; returns false otherwise.\
+`a != b`: returns true if a is not equals to b; returns false otherwise.\
 
 ```java
 int small = 3; // some small number
@@ -33,10 +33,10 @@ System.out.println(small < large); // should be true
 
 In addition, we also have logical operators that work on boolean values, which themselves return a boolean value:
 
-a || b: (or): returns true if at least one of a and b are true; returns false otherwise
-a && b: (and): returns true if both a and b are true; returns false otherwise
-a ^ b: (xor): returns true if exactly one of a and b are true; returns false otherwise
-!a: (not): returns the opposite value of a (eg. returns true if a is false, and false if a is true)
+`a || b`: (or): returns true if at least one of a and b are true; returns false otherwise.\
+`a && b`: (and): returns true if both a and b are true; returns false otherwise.\
+`a ^ b`: (xor): returns true if exactly one of a and b are true; returns false otherwise.\
+`!a`: (not): returns the opposite value of a (eg. returns true if a is false, and false if a is true).\
 
 Also note the use of || and && above as opposed to | and &; || and && are intended to work on boolean values, while | and & are intended to work on bits. Using | and & on boolean values may produce the same results, but this is not the intended use of these operators.
 

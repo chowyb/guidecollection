@@ -52,7 +52,7 @@ class MyObject {
 }
 ```
 
-Note that the toString() method above is implicitly called when printing out the object; you can make it explicit by using `myobj.toString()` instead of just `myobj`.
+Note that the `toString()` method above is implicitly called when printing out the object; you can make it explicit by using `myobj.toString()` instead of just `myobj`.
 
 Also, note that this can still be improved further: what if we could simply initialise the attributes of the class when we construct it for the first time? For this, we write our own constructor in class MyObject:
 
@@ -237,7 +237,7 @@ public class Program {
         System.out.println("Seat 2 is " + (car.getSeat(2) ? "occupied" : "unoccupied"));
         boolean[] seats = car.getSeats();
         seats[2] = true;
-        System.out.println("Seat 2 is " + (car.getSeat(2) ? "occupied" : "unoccupied")); // unexpected output?
+        System.out.println("Seat 2 is " + (car.getSeat(2) ? "occupied" : "unoccupied")); // possibly unexpected output
     }
 }
 

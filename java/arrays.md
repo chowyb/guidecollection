@@ -26,6 +26,18 @@ array[2] = array[2] + 5; // adds 5 to index 2 (third element)
 System.out.println("This value is 9 : " + array[2]);
 ```
 
+Combining this with repetition statements, it then becomes possible to apply the same set of instructions over individual elements in an array:
+
+```java
+int[] array = {3, 7, 4};
+int sum = 0;
+for (int i = 0; i < array.length; i++) {
+    sum += array[i];
+    System.out.println("The value at index " + i + " is " + array[i]);
+    System.out.println("The total sum so far is " + sum);
+}
+````
+
 ## Multidimensional arrays
 
 It is also possible to have an array containing arrays, which is what we call a multidimensional array. Note that unlike languages such as C, arrays in each level of a multidimensional array may vary in size:

@@ -108,8 +108,6 @@ public static int getQuotientOfDivision(int dividend, int divisor) {
     return dividend / divisor;
 }
 
-// note that you can change the above method body to just "return (int) dividend / divisor;" to avoid this redundant method below,
-// but for purposes of illustration we'll use two different methods
 public static int getQuotientOfDivision(double dividend, double divisor) {
     System.out.println("Dividing using doubles");
     double result = dividend / divisor;
