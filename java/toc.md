@@ -1,6 +1,6 @@
 # Java Introduction
 
-Java is an object-orientated programming (OOP) language frequently covered in CS modules in NUS. The following guide is intended to help introduce this language to students who may not be familiar with the language, but has experience for some other language(s).
+Java is an object-orientated programming (OOP) language frequently covered in CS modules in NUS. The following guide is intended to help introduce this language to students who may not be familiar with the language, but have experience for some other language(s).
 
 ## Table of Contents
 
