@@ -158,7 +158,7 @@ while (condition) {
 }
 ```
 
-Also, note that for the while loop, any of the statements (initialisation, condition and update) can be empty. In the event the condition is left empty, the loop simply continues infinitely.
+Also, note that for the for loop, any of the statements (initialisation, condition and update) can be empty. In the event the condition is left empty, the loop simply continues infinitely.
 
 ```java
 for (int i = 0; i < 10; i++) {
